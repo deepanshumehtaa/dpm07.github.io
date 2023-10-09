@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /* margin: 0px;
+            padding: 0px; */
+            box-sizing: border-box;
+            line-height: 1.5rem;
+            word-spacing: 2px;
+            white-space: 1px;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        .little-padding {
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        p{
+            text-align: justify ;
+        }
+
+        a{
+            color: aqua;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img{
+            width: inherit;
+            height: inherit;
+        }
+
+        .outer_resume_border {
+            /* border: 1px solid rgb(255, 255, 255); */
+            margin: 20px;
+            padding: 5px 0vh 0vh 10vh;
+            width: 95vw
+        }
+
+        .resume-head {
+            padding-top: 10px;
+            /* border: 5px solid rgb(248, 1, 1); */
+            height: 25vh;
+            border-color: white;
+            border-bottom: 2px;
+        }
+
+        .social-icons {
+            margin: 5px 0px;
+        }
+
+        .icon-link {
+            color: white;
+        }
+
+        .heading_details {
+        }
+
+        /* .profile_pic {
+            border: 2px solid rgb(13, 248, 1);
+            width: 30%;
+            height: 100%;
+            float: right;
+            border-radius: 10%;
+        } */
+
+        /* .image-profile_pic img {
+            max-width: 100%;
+            height: 200%;
+            object-fit: cover; Maintain aspect ratio and cover the container
+        } */
+
+        .experiences, .projects, .skills {
+            margin-top: 1vh;
+        }
+
+        .ex  {
+            padding-left: 2vw;
+        }
+
+
+        .Name, .experiences-title, .projects-title, .skills-title {
+            font-size: x-large;
+            color: rgb(174, 226, 1);
+            font-weight: 800;
+            /* text-decoration: underline; */
+            text-shadow: 2px 2px 0px #666; /* 3D shadow effect (x-offset, y-offset, blur-radius, color) */
+        }
+
+        .Name{
+            height: 5vh;
+            font-size: 6vh;
+            font-weight: bolder;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        .Company {
+            color: orange;
+        }
+
+        .Job-location{
+            color: orange;
+            font-size: small;
+        }
+
+        .wave {
+            text-decoration: underline;
+            text-decoration: wavy;
+            text-decoration-color: blue;
+        }
+
+        .sub-heading {
+            font-size: large;
+            color: rgb(174, 226, 1);
+            font-weight: 700;
+        }
+
+        li {
+            list-style-type: none;
+            /* white-space: nowrap; */
+            overflow-wrap: break-word;  /* sending extra content to next line */
+            width: 90%;
+            height: 150wh;
+        }
+        li:hover {
+            background-color:rgb(0, 0, 146);
+            cursor: pointer;
+        }
+
+        .line{
+            border: 1px solid blueviolet;
+            margin-top: 2vh;
+            margin-bottom: 3vh;
+        }
+
+        .emoji-list {
+            width: 90%;
+        }
+
+        .emoji-list li::before {
+            content: "🔥";
+            display: inline-block;
+            margin-right: 0.5em; /* Adjust spacing between emoji and list item text */
+        }
+
+        .experience-title-date {
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+        }
+
+        .side-by-side-list {
+            list-style: none;
+        }
+
+        .side-by-side-list li {
+            display: inline-block;
+            width: 20%; /* Adjust the width as needed, and consider margins and padding */
+            margin: 5px; /* Add some space between items */
+            text-align: center; /* Center-align the content */
+            border: 1px solid #ddd; /* Add borders for separation (optional) */
+            padding: 10px; /* Add padding for spacing within each item (optional) */
+            box-sizing: border-box; /* Include padding and border in item width */
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+<div class="outer_resume_border">
+
+    <div class="resume-head" style="margin-top: 5vh;">
+            <div class="Name">
+                Deepanshu Mehta
+            </div>
+                <!-- <div class="social-icons" style="margin-top: 2vh;">
+                    <a href="https://github.com/deepanshumehtaa" target="_blank" class="icon-link">
+                    <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/dpm07" target="_blank" class="icon-link">
+                    <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://stackoverflow.com/users/14113844/deepanshu-mehta" target="_blank" class="icon-link">
+                    <i class="fab fa-stack-overflow"></i>
+                    </a>
+                </div> -->
+        
+            <div class="heading_details" style="display: inline;">
+                <div class="x" style="font-weight: 700; padding-top: 2vh;">Faridabad, Haryana, India</div>
+                <a class="x" style="font-weight: 800; display: block;" href="mailto:mehtadeepanshu567@gmail.com?subject=Contact Deepanshu Mehta">mehtadeepanshu567@gmail.com</a>
+                <a class="x" style="font-weight: 800; display: block;" href="tel:+918837563663">+91 8837563663</a>
+                
+                <div class="little-padding" style="font-weight: 100; padding-top: 2vh;">Willing to relocate anywhere</div>
+            </div>
+    </div>
+
+    <div class="resume-body" style="margin-top: 5vh;">
+        
+        <div class="experiences">
+            <h2 class="experiences-title" style="margin-bottom: 0px;">Experiences:</h2>
+            <div class="line"></div>
+            
+            <div class="experience ex" style="margin-top: 7vh;">
+                <div class="experience-title-date">
+                    <span>
+                        <div id="Job Title" class="sub-heading">Senior Software Developer, <span class="Company">CrewScale</span></div>
+                        <div class="Job-location">Maharashtra, India</div>
+                    </span>
+                    <span class="experience-date">April/2023 - Present</span>
+                </div>
+                
+                <div class="experience-description">
+                    <p>Tech Stack: Python/Django, MySql, HTML, CSS, JavaScript, ReactJS.</p>
+                    <ol class="emoji-list">
+                        <li>Migrate Services from Server to ServerLess</li>
+                        <li>Design Event driven queues SQS and triggers Lambdas concurrently</li>
+                        <li>Create Trigger for Lambda functions using API and EventBridge</li>
+                        <li>Restructured their Database Model</li>
+                        <li>Create Analytics module for their InHouse software</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="experience ex" style="margin-top: 30px;">
+                <div class="experience-title-date">
+                    <span>
+                    <div id="Job Title" class="sub-heading">Senior Software Developer, <span class="Company">Instahyre</span></div>
+                    <div class="Job-location">Remote</div>
+                    </span>
+                    <span class="experience-date">October/2022 - January/2023</span>
+                </div>
+                
+                <div class="experience-description">
+                    <p>Tech Stack: Python/Django, MySql, Postgres, HTML, CSS, TypeScript, Angular, ElasticSearch and RabbitMQ.</p> 
+                    <ol class="emoji-list">
+                        <li>Working on Hiring Portal, mainly on Recruiter side as Full stack Developer (using ReactJS + Django)</li>
+                        <li>Creating priority queues to handle and execute Background tasks.</li>
+                        <li>Improving the page performance and resolving Frontend side Bugs (AngularJs, Django and RabbitMQ)</li>
+                        <li>Improve the ElasticSearch performance by making changes in the process.</li>
+                        <li>Make process idempotent.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="experience ex" style="margin-top: 30px;">
+                <div class="experience-title-date">
+                    <span>
+                        <div id="Job Title" class="sub-heading">Software Developer, <span class="Company">Cashify</span></div>
+                        <div class="Job-location">Haryana, India</div>
+                    </span>
+                    <span class="experience-date">August/2021 - September/2022</span>
+                </div>
+                
+                <div class="experience-description">
+                    <p>Tech Stack: Python/Django, MySql, Postgres, HTML, CSS, JavaScript & FastAPI. </p>
+                    <ol class="emoji-list">
+                        <li>Working on their in house project i.e. Inventory Management System</li>
+                        <li>Restructured the code using BLACK and SOLID principles.</li>
+                        <li>Convert some the modules to Async.</li>
+                        <li>Used TDD approach using PyTest and Increase the test coverage.</li>
+                        <li>Create some Admin panel for Business modules in Django (Backend & Frontend)</li>
+
+                    </ol>
+                </div>
+            </div>
+            
+
+            <div class="experience ex" style="margin-top: 30px;">
+                <div class="experience-title-date">
+                    <span>
+                        <div id="Job Title" class="sub-heading">Junior Software Developer, <span class="Company">Nickelfox Technologies</span></div>
+                        <div class="Job-location">Uttar Pradesh, India</div>
+                    </span>
+                    <span class="experience-date">June/2020 - July/2021</span>
+                </div>
+                
+                <div class="experience-description">
+                    <p>Tech Stack: Python/Django, MySql, Postgres, HTML, CSS, JavaScript and Redis.</p>
+                    <ol class="emoji-list">
+                        <li>Worked on healthcare app that monitors the users heartbeat and sleeping pattern by collecting the 
+                            date form the users related to their mood and sleeping cycle and inform their doctor about their health.</li>
+                        <li>Created a Recommendation system that suggests a user some Multimedia content or articles based upon their current mood.</li>
+                        <li>Created a Backend for an eLearning project which includes scanning QR code from the book and show related video content on their mobile App.</li>
+                        <li>Authentication and Authorisation system with JWT.</li>
+                        <li>Notification service with a APN, SES and FCM.</li>
+                        <li>Revamped few existing services to Increase system performance.</li>
+                        <li>Replace MVC architecture with MVCS architect text Tech python Django Postgres VPN and FCM</li>
+                    </ol>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        
+        <br>
+        <div class="skills" style="margin-top: 2vh;">
+            <h2 class="skills-title" style="margin-bottom: 0px;">Skills:</h2>
+            <div class="line"></div>
+            <ul class="skills-list side-by-side-list">
+                <li>Python</li> <li>Django</li> <li>Amazon Web Services (AWS)</li>
+                <li>JavaScript</li> <li>ReactJS</li> <li>ElasticSearch</li>
+                <li>Flask</li> <li>Docker</li> <li>Go</li> <li>MongoDB</li> <li>MySQL</li> <li>Postgresql</li>
+                <li>GCP</li> <li>AWS Lambda, KMS</li> <li>Data Pipeline, SNS & IAM</li>
+              </ul>
+              
+            <br>
+        </div>
+        
+        <br>
+        <div class="projects" style="margin-top: 2vh;">
+            <h2 class="projects-title" style="margin-bottom: 0px;">Projects & Certifications:</h2>
+            <div class="line"></div>
+            <br>
+
+            <div class="experience ex" style="margin-top: 2vh;">
+                <div class="experience-title-date">
+                    <span class="sub-heading">Artificial Intelligence with Python, <span style="color: orange;">CDaC</span></span>
+                    <span class="experience-date">July/2020</span>
+                </div>
+
+                <p class="experience-description" style="width: 80%;">
+                    Artificial Intelligence with Python   
+  
+                    <ol>
+                    <li>•  Understood the use cases and applications of Machine Learning/Deep Learning, Data Science and   
+                    Statistics with Python.</li>
+                    
+                    <li>•  Got hands on experience on Machine Learning libraries like: TensorFlow, PyTorch, scikit-learn,   
+                    Numpy and Pandas.</li>
+                    
+                    <li>•  CNN,  image Processing, generation and classification use cases.</li>
+                    
+                    <li>•  basics of Natural Language processing ( NLP ) </li>
+                    </ol>
+                </p>
+            </div>
+
+            <div class="experience ex" style="margin-top: 30px;">
+                <div class="experience-title-date">
+                    <span class="sub-heading">Mongodb NoSQL Basics, <span style="color: orange;">MongoDB University</span></span>
+                    <span class="experience-date">August/2022</span>
+                </div>
+                
+                <p class="experience-description" style="width: 80%;">
+                    Basic CRUD operations & key topics such as aggregation, indexing, data modeling, and transactions.
+                    Also, Created a small project in PyMongo.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+</html>
