@@ -28,901 +28,451 @@
 
     <title>Deepanshu Mehta - Senior Software Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepanshu Mehta - Resume</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --border-color: #e2e8f0;
         }
 
-        :root {
-            --primary-color: #00d4ff;
-            --secondary-color: #ff6b35;
-            --accent-color: #aee200;
-            --dark-bg: #0a0a0a;
-            --card-bg: #1a1a1a;
-            --text-primary: #ffffff;
-            --text-secondary: #b0b0b0;
-            --text-muted: #808080;
-            --border-color: #333333;
-            --gradient-primary: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
-            --gradient-secondary: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
-            --gradient-accent: linear-gradient(135deg, #aee200 0%, #8bc34a 100%);
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            --shadow-hover: 0 8px 15px rgba(0, 212, 255, 0.2);
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            background-color: var(--dark-bg);
-            color: var(--text-primary);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            word-spacing: 1px;
-            overflow-x: hidden;
+            line-height: 1.5;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            padding: 40px 20px;
         }
 
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Section */
-        header {
-            background: linear-gradient(135deg, var(--card-bg) 0%, rgba(26, 26, 26, 0.8) 100%);
-            backdrop-filter: blur(10px);
-            border-bottom: 2px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            animation: slideDown 0.6s ease-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Resume Container */
         .resume-container {
-            background: var(--dark-bg);
-            min-height: 100vh;
-            position: relative;
-        }
-
-        .resume-container::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(174, 226, 0, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .outer-resume-border {
-            margin: 40px auto;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
             padding: 40px;
-            max-width: 1000px;
-            background: var(--card-bg);
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            position: relative;
-            z-index: 2;
-            border: 1px solid var(--border-color);
-            animation: fadeInUp 0.8s ease-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Header Section */
-        .resume-header {
+        /* Header Styling */
+        header {
             text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid var(--border-color);
-            position: relative;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
         }
 
-        .resume-header::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 2px;
-            background: var(--gradient-primary);
-        }
-
-        .name {
-            font-size: 3.5rem;
-            font-weight: 900;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        h1 {
+            color: var(--primary-color);
+            font-size: 28px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            animation: glow 2s ease-in-out infinite alternate;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
         }
 
-        @keyframes glow {
-            from { filter: brightness(1); }
-            to { filter: brightness(1.2); }
+        .title {
+            color: var(--secondary-color);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
 
         .contact-info {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
+            justify-content: center;
+            gap: 15px;
+            font-size: 13px;
+            color: var(--text-light);
         }
 
-        .contact-left {
-            text-align: left;
-        }
-
-        .contact-right {
-            text-align: right;
-        }
-
-        .contact-item {
-            display: block;
-            color: var(--text-secondary);
+        .contact-info a {
+            color: var(--text-light);
             text-decoration: none;
-            margin: 8px 0;
-            transition: all 0.3s ease;
-            font-weight: 500;
         }
 
-        .contact-item:hover {
+        .contact-info a:hover {
+            text-decoration: underline;
+            color: var(--secondary-color);
+        }
+
+        /* Section Universal Styling */
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
             color: var(--primary-color);
-            transform: translateX(5px);
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 12px;
         }
 
-        .contact-item i {
-            margin-right: 10px;
-            width: 20px;
-            text-align: center;
+        p.summary {
+            font-size: 14px;
+            color: var(--text-dark);
+            text-align: justify;
         }
 
-        .download-resume {
-            background: var(--gradient-accent);
-            color: var(--dark-bg);
-            padding: 12px 24px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.3s ease;
-            margin-top: 10px;
+        /* Technical Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100%, 100%));
+            gap: 8px;
+            font-size: 14px;
         }
 
-        .download-resume:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(174, 226, 0, 0.3);
+        .skill-group {
+            display: flex;
         }
 
-        /* Section Styles */
-        .section {
-            margin-bottom: 50px;
-            animation: fadeIn 0.8s ease-out;
+        .skill-title {
+            font-weight: bold;
+            min-width: 140px;
+            color: var(--secondary-color);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* Experience & Projects Styling */
+        .job-entry, .project-entry {
+            margin-bottom: 18px;
         }
 
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: var(--gradient-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 30px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .section-title::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 5px;
-            height: 30px;
-            background: var(--gradient-secondary);
-            border-radius: 3px;
-        }
-
-        .divider {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-            margin: 20px 0;
-        }
-
-        /* Experience Cards */
-        .experience-card {
-            background: rgba(26, 26, 26, 0.6);
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .experience-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--gradient-primary);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .experience-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--primary-color);
-        }
-
-        .experience-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .experience-header {
+        .job-header, .project-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .experience-title {
-            flex: 1;
+            align-items: baseline;
+            margin-bottom: 4px;
         }
 
         .job-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            color: var(--text-dark);
         }
 
-        .company {
-            color: var(--secondary-color);
+        .job-company, .project-tech {
+            font-size: 14px;
             font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .location {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-top: 5px;
-        }
-
-        .experience-date {
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-
-        .tech-stack {
-            background: rgba(255, 107, 53, 0.1);
-            border: 1px solid var(--secondary-color);
             color: var(--secondary-color);
-            padding: 10px 15px;
-            border-radius: 10px;
-            margin: 15px 0;
+        }
+
+        .job-date, .project-date {
+            font-size: 13px;
+            color: var(--text-light);
             font-weight: 500;
-            font-size: 0.95rem;
         }
 
-        .experience-list {
-            list-style: none;
-            padding: 0;
+        .job-meta {
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 6px;
         }
 
-        .experience-list li {
-            position: relative;
-            padding: 12px 0 12px 35px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+            font-size: 13.5px;
+            color: var(--text-dark);
         }
 
-        .experience-list li:last-child {
-            border-bottom: none;
+        li {
+            margin-bottom: 4px;
+            text-align: justify;
         }
 
-        .experience-list li::before {
-            content: '▶';
-            position: absolute;
-            left: 0;
-            top: 12px;
-            color: var(--accent-color);
-            font-size: 0.8rem;
-            transition: transform 0.3s ease;
-        }
-
-        .experience-list li:hover {
-            padding-left: 40px;
-            background: rgba(174, 226, 0, 0.05);
-        }
-
-        .experience-list li:hover::before {
-            transform: translateX(5px);
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .skill-item {
-            background: rgba(26, 26, 26, 0.6);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-primary);
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-
-        .skill-item:hover {
-            transform: translateY(-3px);
-            border-color: var(--primary-color);
-            color: var(--dark-bg);
-        }
-
-        .skill-item:hover::before {
-            left: 0;
-        }
-
-        .skill-item span {
-            position: relative;
-            z-index: 1;
-            font-weight: 600;
-        }
-
-        /* Education Section */
-        .education-card {
-            background: rgba(26, 26, 26, 0.6);
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .education-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--accent-color);
-        }
-
-        .degree-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 10px;
-        }
-
-        .university {
-            color: var(--accent-color);
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .university a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        .university a:hover {
-            text-decoration: underline;
-        }
-
-        /* Projects Section */
-        .project-card {
-            background: rgba(26, 26, 26, 0.6);
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateX(5px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--secondary-color);
-        }
-
-        .project-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 15px;
+        /* Education & Certifications */
+        .edu-entry, .cert-entry {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
         }
 
-        .project-date {
-            background: rgba(255, 107, 53, 0.1);
-            border: 1px solid var(--secondary-color);
-            color: var(--secondary-color);
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            font-weight: 600;
+        .edu-details, .cert-details {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 2px;
         }
 
-        .project-description {
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .project-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 15px;
-        }
-
-        .project-list li {
-            position: relative;
-            padding: 8px 0 8px 25px;
-            color: var(--text-secondary);
-        }
-
-        .project-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        /* Social Icons */
-        .social-icons {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid var(--border-color);
-        }
-
-        .social-icons a {
-            display: inline-block;
-            margin: 0 15px;
-            color: var(--text-secondary);
-            font-size: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: var(--primary-color);
-            transform: translateY(-5px);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .outer-resume-border {
-                margin: 20px;
-                padding: 20px;
+        /* Print Media Queries */
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
             }
-
-            .name {
-                font-size: 2.5rem;
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
             }
-
-            .contact-info {
-                flex-direction: column;
-                text-align: center;
+            section {
+                page-break-inside: avoid;
             }
-
-            .contact-left,
-            .contact-right {
-                text-align: center;
-            }
-
-            .experience-header {
-                flex-direction: column;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        /* Loading Animation */
-        .fade-in {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        /* Scroll Progress Bar */
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: var(--gradient-primary);
-            z-index: 10000;
-            transition: width 0.3s ease;
         }
     </style>
 </head>
 <body>
-    <div class="progress-bar" id="progressBar"></div>
-    
-    <div class="resume-container">
-        <div class="outer-resume-border">
-            <!-- Header Section -->
-            <header class="resume-header">
-                <h1 class="name">Deepanshu Mehta</h1>
-                <div class="contact-info">
-                    <div class="contact-left">
-                        <a href="mailto:mehtadeepanshu567@gmail.com" class="contact-item">
-                            <i class="fas fa-envelope"></i> mehtadeepanshu567@gmail.com
-                        </a>
-                        <a href="tel:+918837563663" class="contact-item">
-                            <i class="fas fa-phone"></i> +91 8837563663
-                        </a>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i> Faridabad, Haryana, India
-                        </div>
-                    </div>
-                    <div class="contact-right">
-                        <div class="contact-item">
-                            <i class="fas fa-globe"></i> Willing to relocate anywhere
-                        </div>
-                        <a href="https://raw.githubusercontent.com/deepanshumehtaa/dpm07.github.io/main/resume.pdf" 
-                           class="download-resume" target="_blank">
-                            <i class="fas fa-download"></i> Download Resume
-                        </a>
-                    </div>
-                </div>
-            </header>
 
-            <!-- Experience Section -->
-            <section class="section">
-                <h2 class="section-title">Professional Experience</h2>
-                <div class="divider"></div>
+<div class="resume-container">
 
-                <div class="experience-card fade-in">
-                    <div class="experience-header">
-                        <div class="experience-title">
-                            <div class="job-title">Software Developer</div>
-                            <div class="company">Quadrant Technologies (Deputed to Deloitte)</div>
-                            <div class="location">Gurugram, Haryana</div>
-                        </div>
-                        <div class="experience-date">Nov 2023 - Present</div>
-                    </div>
-                    <div class="tech-stack">
-                        <i class="fas fa-code"></i> Python, SnowFlake, FastAPI, Redis, Azure, ReactJS, Java, Spring Boot
-                    </div>
-                    <ul class="experience-list">
-                        <li>Created scalable APIs from scratch with comprehensive schemas, models, and views</li>
-                        <li>Implemented advanced Redis caching with multi-threading for optimal performance</li>
-                        <li>Setup and integrated Azure Key Vault for secure environment variable management</li>
-                        <li>Developed enterprise authentication using LDAP and OpenID Connect</li>
-                        <li>Created asynchronous background tasks for improved system responsiveness</li>
-                        <li>Implemented advanced error handling and logging for microservices architecture</li>
-                        <li>Optimized performance with database and Redis connection pooling</li>
-                        <li>Developed Java Spring Boot applications for enterprise integration</li>
-                        <li>Created comprehensive stress tests using JMeter for performance validation</li>
-                    </ul>
-                </div>
+    <header>
+        <h1>Deepanshu Mehta</h1>
+        <div class="title">Senior Software Engineer &bull; Backend & Full-Stack &bull; GenAI / LLM Systems</div>
+        <div class="contact-info">
+            <span>Faridabad, Haryana, India</span>
+            <span>&bull;</span>
+            <span><a href="mailto:mehtadeepanshu567@gmail.com">mehtadeepanshu567@gmail.com</a></span>
+            <span>&bull;</span>
+            <span>+91 88375 63663</span>
+            <span>&bull;</span>
+            <span><a href="https://linkedin.com/in/dpm07" target="_blank">linkedin.com/in/dpm07</a></span>
+            <span>&bull;</span>
+            <span>Open to Relocation</span>
+        </div>
+    </header>
 
-                <div class="experience-card fade-in">
-                    <div class="experience-header">
-                        <div class="experience-title">
-                            <div class="job-title">Senior Software Developer</div>
-                            <div class="company">CrewScale (Deputed to Everest Fleet)</div>
-                            <div class="location">Maharashtra, India</div>
-                        </div>
-                        <div class="experience-date">Mar 2023 - Nov 2023</div>
-                    </div>
-                    <div class="tech-stack">
-                        <i class="fas fa-code"></i> Python/Django, MySQL, HTML, CSS, JavaScript, ReactJS, AWS
-                    </div>
-                    <ul class="experience-list">
-                        <li>Migrated legacy services from server-based to serverless architecture</li>
-                        <li>Designed event-driven queues using AWS SQS with concurrent Lambda triggers</li>
-                        <li>Implemented API Gateway and EventBridge triggers for Lambda functions</li>
-                        <li>Restructured and optimized database models for improved performance</li>
-                        <li>Developed comprehensive analytics module for in-house fleet management software</li>
-                    </ul>
-                </div>
+    <section>
+        <h2>Professional Summary</h2>
+        <p class="summary">
+            Results-driven Senior Software Engineer with 6+ years of experience designing and delivering scalable backend systems, full-stack applications, and AI-powered solutions. Deep expertise in Python (Django, FastAPI), cloud platforms (AWS, Azure), and modern LLM/GenAI frameworks (LangChain, LangGraph). Proven track record across healthcare, EdTech, e-commerce, and enterprise domains. Experienced in agentic AI systems, RAG pipelines, event-driven architectures, and DevOps practices including containerisation and CI/CD. Actively seeking to leverage distributed systems and AI expertise at Google.
+        </p>
+    </section>
 
-                <div class="experience-card fade-in">
-                    <div class="experience-header">
-                        <div class="experience-title">
-                            <div class="job-title">Senior Software Developer</div>
-                            <div class="company">Instahyre</div>
-                            <div class="location">Remote</div>
-                        </div>
-                        <div class="experience-date">Oct 2022 - Jan 2023</div>
-                    </div>
-                    <div class="tech-stack">
-                        <i class="fas fa-code"></i> Python/Django, MySQL, PostgreSQL, HTML, CSS, TypeScript, Angular, ElasticSearch, RabbitMQ
-                    </div>
-                    <ul class="experience-list">
-                        <li>Developed recruiter-side features for hiring portal using ReactJS and Django</li>
-                        <li>Implemented priority queues for efficient background task management</li>
-                        <li>Optimized page performance and resolved frontend bugs in AngularJS applications</li>
-                        <li>Enhanced ElasticSearch performance through query optimization</li>
-                        <li>Implemented idempotent processes for data consistency</li>
-                    </ul>
-                </div>
-
-                <div class="experience-card fade-in">
-                    <div class="experience-header">
-                        <div class="experience-title">
-                            <div class="job-title">Software Developer</div>
-                            <div class="company">Cashify</div>
-                            <div class="location">Haryana, India</div>
-                        </div>
-                        <div class="experience-date">Aug 2021 - Sep 2022</div>
-                    </div>
-                    <div class="tech-stack">
-                        <i class="fas fa-code"></i> Python/Django, MySQL, PostgreSQL, HTML, CSS, JavaScript, FastAPI
-                    </div>
-                    <ul class="experience-list">
-                        <li>Developed inventory management system with full-stack capabilities</li>
-                        <li>Restructured codebase following BLACK formatting and SOLID principles</li>
-                        <li>Converted critical modules to asynchronous processing for improved performance</li>
-                        <li>Implemented Test-Driven Development using PyTest, increasing test coverage</li>
-                        <li>Created custom Django admin panels for business module management</li>
-                    </ul>
-                </div>
-
-                <div class="experience-card fade-in">
-                    <div class="experience-header">
-                        <div class="experience-title">
-                            <div class="job-title">Junior Software Developer</div>
-                            <div class="company">Nickelfox Technologies</div>
-                            <div class="location">Uttar Pradesh, India</div>
-                        </div>
-                        <div class="experience-date">Jun 2020 - Aug 2021</div>
-                    </div>
-                    <div class="tech-stack">
-                        <i class="fas fa-code"></i> Python/Django, MySQL, PostgreSQL, HTML, CSS, JavaScript, Redis
-                    </div>
-                    <ul class="experience-list">
-                        <li>Developed healthcare monitoring app for heartbeat and sleep pattern analysis</li>
-                        <li>Created intelligent recommendation system based on user mood analysis</li>
-                        <li>Built e-learning backend with QR code scanning for video content delivery</li>
-                        <li>Implemented JWT-based authentication and authorization system</li>
-                        <li>Developed cross-platform notification services using APN, SES, and FCM</li>
-                        <li>Migrated from MVC to MVCS architecture for improved code organization</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Skills Section -->
-            <section class="section">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="divider"></div>
-                <div class="skills-grid">
-                    <div class="skill-item"><span>Python</span></div>
-                    <div class="skill-item"><span>Django</span></div>
-                    <div class="skill-item"><span>FastAPI</span></div>
-                    <div class="skill-item"><span>ReactJS</span></div>
-                    <div class="skill-item"><span>JavaScript</span></div>
-                    <div class="skill-item"><span>TypeScript</span></div>
-                    <div class="skill-item"><span>Angular</span></div>
-                    <div class="skill-item"><span>MySQL</span></div>
-                    <div class="skill-item"><span>PostgreSQL</span></div>
-                    <div class="skill-item"><span>MongoDB</span></div>
-                    <div class="skill-item"><span>Redis</span></div>
-                    <div class="skill-item"><span>ElasticSearch</span></div>
-                    <div class="skill-item"><span>AWS</span></div>
-                    <div class="skill-item"><span>Azure</span></div>
-                    <div class="skill-item"><span>Docker</span></div>
-                    <div class="skill-item"><span>Java</span></div>
-                    <div class="skill-item"><span>Spring Boot</span></div>
-                    <div class="skill-item"><span>SnowFlake</span></div>
-                    <div class="skill-item"><span>Flask</span></div>
-                    <div class="skill-item"><span>AWS Lambda</span></div>
-                    <div class="skill-item"><span>KMS</span></div>
-                    <div class="skill-item"><span>IAM</span></div>
-                    <div class="skill-item"><span>RabbitMQ</span></div>
-                    <div class="skill-item"><span>SQS</span></div>
-                </div>
-            </section>
-
-            <!-- Education Section -->
-            <section class="section">
-                <h2 class="section-title">Education</h2>
-                <div class="divider"></div>
-                <div class="education-card fade-in">
-                    <div class="degree-title">Bachelor of Technology in Electronics & Communication Engineering</div>
-                    <div class="university">
-                        <a href="https://www.bennett.edu.in/" target="_blank">
-                            <i class="fas fa-graduation-cap"></i> Bennett University
-                        </a>
-                    </div>
-                    <div class="location" style="margin-top: 10px;">
-                        <i class="fas fa-map-marker-alt"></i> Greater Noida, Uttar Pradesh, India
-                    </div>
-                    <div class="experience-date" style="margin-top: 15px; display: inline-block;">
-                        Aug 2016 - Jun 2020
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects & Certifications Section -->
-            <section class="section">
-                <h2 class="section-title">Projects & Certifications</h2>
-                <div class="divider"></div>
-
-                <div class="project-card fade-in">
-                    <div class="project-title">
-                        Artificial Intelligence with Python
-                        <div class="project-date">July 2020</div>
-                    </div>
-                    <div class="project-description">
-                        <strong>Institution:</strong> CDaC
-                    </div>
-                    <ul class="project-list">
-                        <li>Comprehensive understanding of Machine Learning/Deep Learning applications and Data Science with Python</li>
-                        <li>Hands-on experience with TensorFlow, PyTorch, scikit-learn, NumPy, and Pandas</li>
-                        <li>Implemented CNN applications for image processing, generation, and classification</li>
-                        <li>Developed foundational Natural Language Processing (NLP) solutions</li>
-                    </ul>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-title">
-                        MongoDB NoSQL Basics
-                        <div class="project-date">August 2022</div>
-                    </div>
-                    <div class="project-description">
-                        <strong>Institution:</strong> MongoDB University
-                    </div>
-                    <ul class="project-list">
-                        <li>Mastered CRUD operations, aggregation, indexing, and data modeling</li>
-                        <li>Implemented transaction management for data consistency</li>
-                        <li>Developed practical project using PyMongo for real-world applications</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Social Icons -->
-            <div class="social-icons">
-                <a href="https://github.com/deepanshumehtaa" target="_blank" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/dpm07" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://stackoverflow.com/users/14113844/deepanshu-mehta" target="_blank" title="Stack Overflow">
-                    <i class="fab fa-stack-overflow"></i>
-                </a>
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <span class="skill-title">Languages:</span>
+                <span>Python (6 yrs), JavaScript / TypeScript (4 yrs), SQL, Bash</span>
+            </div>
+            <div class="skill-group">
+                <span class="skill-title">Backend:</span>
+                <span>FastAPI, Django, Flask, REST APIs, gRPC, Async / Concurrent Programming, Multithreading</span>
+            </div>
+            <div class="skill-group">
+                <span class="skill-title">Frontend:</span>
+                <span>ReactJS, Angular, TypeScript, HTML5, CSS3</span>
+            </div>
+            <div class="skill-group">
+                <span class="skill-title">GenAI / ML:</span>
+                <span>LangChain, LangGraph, RAG Pipelines, Agentic AI, OpenAI / Anthropic APIs, Prompt Engineering, TensorFlow, PyTorch, scikit-learn, NLP</span>
+            </div>
+            <div class="skill-group">
+                <span class="skill-title">Databases:</span>
+                <span>PostgreSQL, MySQL, MongoDB, Redis, Snowflake, Elasticsearch</span>
+            </div>
+            <div class="skill-group">
+                <span class="skill-title">Cloud & DevOps:</span>
+                <span>AWS (Lambda, SQS, EventBridge, KMS, IAM, S3), Azure (Key Vault, Functions), Docker, Kubernetes, Databricks, PySpark, CI/CD</span>
+            </div>
+            <div class="skill-group">
+                <span class="skill-title">Architecture:</span>
+                <span>Microservices, Event-Driven (SQS, RabbitMQ), Serverless, SOLID / CLEAN Principles, TDD (PyTest), Connection Pooling, LDAP / OpenID / JWT Auth</span>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        // Progress Bar
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById('progressBar').style.width = scrolled + '%';
-        });
+    <section>
+        <h2>Professional Experience</h2>
 
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        <div class="job-entry">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Consultant</span> 
+                    <span class="job-company">Deloitte USI</span>
+                </div>
+                <span class="job-date">Nov 2024 – Present</span>
+            </div>
+            <div class="job-meta">
+                Domain: Healthcare &bull; Stack: Python, FastAPI, LangChain, LangGraph, Snowflake, Redis, MongoDB, Azure, Databricks, ReactJS
+            </div>
+            <ul>
+                <li>Architected a RAG-based document intelligence platform for healthcare data governance: users upload clinical/policy documents as context, and the system auto-generates a glossary of table/column descriptions from metadata schemas, reducing manual documentation effort by ~70%.</li>
+                <li>Built an agentic AI pipeline using LangGraph to autonomously crawl and compare competitor healthcare policies against client policies, identify regulatory loopholes, and auto-draft hardened policy recommendations — currently in active production at Deloitte.</li>
+                <li>Designed a high-throughput FastAPI wrapper with Elasticsearch: implemented elastic connection pooling and multithreading to handle thousands of concurrent healthcare data requests with zero message loss.</li>
+                <li>Established Redis as Celery messaging Queue for handeling the Async Tasks</li>
+                
+            </ul>
+        </div>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+        <div class="job-entry">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Senior Software Engineer</span> 
+                    <span class="job-company">| Quadrant Technologies (Deputed: Deloitte)</span>
+                </div>
+                <span class="job-date">Nov 2023 – Nov 2024</span>
+            </div>
+            <div class="job-meta">
+                Domain: Healthcare &bull; Stack: Python, FastAPI, LangChain, LangGraph, Snowflake, Redis, MongoDB, Azure, Databricks, ReactJS
+            </div>
+            <ul>
+                <li>Designed a high-throughput FastAPI wrapper with Elasticsearch: implemented elastic connection pooling and multithreading to handle thousands of concurrent healthcare data requests with zero message loss.</li>
+                <li>Established Redis caching layer with multithreaded cache population for frequently accessed healthcare records, reducing average API response time by 60% under peak load.</li>
+                <li>Implemented enterprise-grade authentication via LDAP and OpenID Connect for HIPAA-aligned access control; integrated Azure Key Vault for zero-plaintext secret management.</li>
+                <li>Built async background task framework compatible with microservice architecture for healthcare data pipelines; integrated structured logging and distributed error-handling traceable across services.</li>
+                <li>Optimised database and Redis connection pools on Snowflake and PostgreSQL, improving throughput by 40% for high-concurrency healthcare analytics workloads.</li>
+            </ul>
+        </div>
 
-        // Observe all cards
-        document.querySelectorAll('.fade-in').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
+        <div class="job-entry">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Senior Software Developer</span> 
+                    <span class="job-company">| CrewScale (Deputed: Everest Fleet)</span>
+                </div>
+                <span class="job-date">Mar 2023 – Nov 2023</span>
+            </div>
+            <div class="job-meta">
+                Stack: Python, Django, MySQL, AWS Lambda, SQS, EventBridge, ReactJS
+            </div>
+            <ul>
+                <li>Led migration of monolithic services to serverless architecture on AWS Lambda, reducing infrastructure costs by 35%.</li>
+                <li>Designed event-driven queue system using AWS SQS with concurrent Lambda triggers via EventBridge, improving order processing throughput by 50%.</li>
+                <li>Restructured legacy relational database schema for Everest Fleet's fleet management platform, achieving 30% reduction in query execution time.</li>
+                <li>Built an in-house analytics module providing real-time fleet KPIs and driver performance dashboards for ops teams.</li>
+            </ul>
+        </div>
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        <div class="job-entry">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Senior Software Developer</span> 
+                    <span class="job-company">| Instahyre</span>
+                </div>
+                <span class="job-date">Oct 2022 – Jan 2023</span>
+            </div>
+            <div class="job-meta">
+                Stack: Python, Django, PostgreSQL, MySQL, TypeScript, Angular, Elasticsearch, RabbitMQ
+            </div>
+            <ul>
+                <li>Contributed to Instahyre's hiring portal as a full-stack engineer (ReactJS + Django), focusing on recruiter-side pipeline management and candidate tracking features.</li>
+                <li>Implemented idempotent priority queues with RabbitMQ for reliable background task execution, eliminating duplicate processing bugs.</li>
+                <li>Optimised Elasticsearch indexing and query pipeline, reducing search latency by 45% across job and candidate indices.</li>
+                <li>Resolved critical frontend performance regressions in AngularJS, improving page load times and overall recruiter UX.</li>
+            </ul>
+        </div>
 
-        // Add hover effect to skill items
-        document.querySelectorAll('.skill-item').forEach(skill => {
-            skill.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px) scale(1.05)';
-            });
-            
-            skill.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-    </script>
+        <div class="job-entry">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Software Developer</span> 
+                    <span class="job-company">| Cashify</span>
+                </div>
+                <span class="job-date">Aug 2021 – Sep 2022</span>
+            </div>
+            <div class="job-meta">
+                Stack: Python, Django, FastAPI, PostgreSQL, MySQL, JavaScript
+            </div>
+            <ul>
+                <li>Developed and maintained Cashify's internal Inventory Management System, handling SKU lifecycle from acquisition to resale.</li>
+                <li>Applied SOLID and Clean Architecture principles to refactor legacy codebase using Black formatter, increasing code maintainability score significantly.</li>
+                <li>Converted synchronous Django modules to async, improving I/O-bound API response times by 35%.</li>
+                <li>Adopted TDD methodology with PyTest, increasing test coverage from ~20% to 80%+ across critical inventory modules.</li>
+                <li>Built Django Admin panels for business operations teams, enabling self-service data management and reducing ops ticket volume.</li>
+            </ul>
+        </div>
+
+        <div class="job-entry">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Junior Software Developer</span> 
+                    <span class="job-company">| Nickelfox Technologies</span>
+                </div>
+                <span class="job-date">Jun 2020 – Aug 2021</span>
+            </div>
+            <div class="job-meta">
+                Stack: Python, Django, PostgreSQL, MySQL, Redis, JWT, AWS SES, FCM / APNs
+            </div>
+            <ul>
+                <li>Built backend for a healthcare app monitoring user heartbeats and sleep patterns, integrating wearable data to generate doctor-facing health reports.</li>
+                <li>Engineered a mood-based multimedia recommendation engine using collaborative filtering, improving user engagement by 40%.</li>
+                <li>Developed a QR-code-driven eLearning backend: scanning a book's QR code triggers contextual video content on the mobile app.</li>
+                <li>Implemented multi-channel notification service using APNs, AWS SES, and Firebase FCM for push, email, and in-app notifications.</li>
+                <li>Designed JWT-based authentication and role-based authorisation system across all platform services.</li>
+                <li>Refactored existing services from MVC to MVCS architecture, reducing average response time by 25%.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Projects & GenAI Work</h2>
+
+        <div class="project-entry">
+            <div class="project-header">
+                <span class="job-title">Agentic Policy Analysis System</span>
+                <span class="project-tech">LangGraph &bull; LangChain &bull; FastAPI &bull; Redis &bull; Databricks</span>
+            </div>
+            <ul>
+                <li>Designed a multi-agent LangGraph pipeline that autonomously discovers competitor insurance/financial policies from the web, performs semantic comparison against client documents, identifies regulatory loopholes, and produces hardened policy recommendations — cutting manual policy review cycles from days to hours.</li>
+            </ul>
+        </div>
+
+        <div class="project-entry">
+            <div class="project-header">
+                <span class="job-title">RAG Document Intelligence & Glossary Generator</span>
+                <span class="project-tech">FastAPI &bull; LangChain &bull; Snowflake &bull; Azure</span>
+            </div>
+            <ul>
+                <li>Built a production RAG system enabling users to upload domain documents as context; the pipeline parses metadata tables (table name, column name) and uses LLM inference to auto-generate human-readable table and column descriptions, dramatically improving data governance documentation.</li>
+            </ul>
+        </div>
+
+        <div class="project-entry">
+            <div class="project-header">
+                <span class="job-title">High-Throughput Elasticsearch API Gateway</span>
+                <span class="project-tech">FastAPI &bull; Elasticsearch &bull; Multithreading &bull; Redis</span>
+            </div>
+            <ul>
+                <li>Implemented a fault-tolerant FastAPI gateway around Elasticsearch, leveraging connection pooling, thread-safe request queuing, and Redis-backed response caching — achieving zero message loss under stress loads that previously caused system failures.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="edu-entry">
+            <div>
+                <strong>B.Tech – Electronics & Communication Engineering</strong>
+                <div class="edu-details">Bennett University, Greater Noida, Uttar Pradesh, India</div>
+            </div>
+            <span class="job-date">Aug 2016 – Jun 2020</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Certifications & Training</h2>
+        <div class="cert-entry">
+            <div>
+                <strong>Artificial Intelligence with Python</strong> — <span class="cert-details">CDAC</span>
+                <div class="cert-details">Covered ML/DL fundamentals, CNNs, image classification, NLP basics; hands-on with TensorFlow, PyTorch.</div>
+            </div>
+            <span class="job-date">Jul 2020</span>
+        </div>
+        <div class="cert-entry" style="margin-bottom: 0;">
+            <div>
+                <strong>MongoDB NoSQL Basics</strong> — <span class="cert-details">MongoDB University</span>
+                <div class="cert-details">CRUD operations, aggregation, indexing, data modeling, transactions; built a project in PyMongo.</div>
+            </div>
+            <span class="job-date">Aug 2022</span>
+        </div>
+    </section>
+
+</div>
+
 </body>
 </html>
